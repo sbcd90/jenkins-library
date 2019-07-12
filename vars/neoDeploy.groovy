@@ -133,6 +133,8 @@ void call(parameters = [:]) {
             .withPropertyInValues('deployMode', DeployMode.stringValues())
 
         Map configuration = configHelper.use()
+        configuration.deployMode = 'warParams'
+        configuration.warAction = 'deploy'
 
         DeployMode deployMode = DeployMode.fromString(configuration.deployMode)
 
